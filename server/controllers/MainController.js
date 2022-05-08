@@ -14,7 +14,6 @@ async function requestAsset(req, res) {
     
     const account = web3.eth.accounts.privateKeyToAccount(config.PRIVATE_KEY);
     const assets = await contract.methods.ownedTokens(account.address).call();
-    console.log(assets);
     for (let i = 0; i < assets.length; i++) {
       if (Math.floor(assets[i] / 10) === membership) {
         const transaction = {
@@ -65,7 +64,6 @@ async function setBaseUri(req, res) {
       config.PRIVATE_KEY
     );
 
-    await 
     await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     res.json({ baseUri: req.body.baseUri });
   } catch (e) {

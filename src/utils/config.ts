@@ -1,6 +1,6 @@
 const config = {
   appID: 'NFTy_Meta_Admin',
-  apiUrl: 'http://localhost:4000/api',
+  apiUrl: (process.env.NODE_ENV === "development" ? 'http://localhost:4000/api' : '/api'),
   whitelabelId: process.env.REACT_APP_KEY || '',
   bytecode: "",
   rpcUrl: "https://api.avax-test.network/ext/bc/C/rpc",
