@@ -18,7 +18,7 @@ const BackendWallet = (props: IProps) => {
 
   return (
     <BackendWalletComponent>
-      <h2>Backend wallet</h2>
+      <h2>Backend wallet (Balance: {assets.length})</h2>
       <div className="asset-container">
         <Grid container spacing={2}>
           {assets.map(asset => (

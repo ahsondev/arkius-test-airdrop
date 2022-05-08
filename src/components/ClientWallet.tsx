@@ -56,7 +56,7 @@ const ClientWallet = (props: IProps) => {
 
   return (
     <ClientWalletComponent>
-      <h2>Client wallet</h2>
+      <h2>Client wallet (Balance: {assets.length})</h2>
       <div className="wallet-input">
         <TextField label="Client wallet" value={wallet} size="small" onChange={(e: any) => setWallet(e.target.value)}/>
         <Button type="button" onClick={onSetWallet} variant='contained'>Set</Button>
